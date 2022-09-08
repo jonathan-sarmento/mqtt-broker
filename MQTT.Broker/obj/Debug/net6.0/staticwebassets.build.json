@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "h6YndYtCDj9tJSDDV1lHSB8gz9ruKntEB2Hdh2xLBGg=",
+  "Source": "MQTT.Broker",
+  "BasePath": "_content/MQTT.Broker",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
