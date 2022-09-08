@@ -18,3 +18,8 @@ COPY --from=build ./MQTT.Broker/out .
 EXPOSE 80
 EXPOSE 1883
 CMD ["dotnet", "MQTT.Broker.dll"]
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet MQTT.Broker.dll
