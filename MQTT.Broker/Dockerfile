@@ -17,4 +17,4 @@ RUN dotnet publish -c Release -o out
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR ./
 COPY --from=build ./MQTT.Broker/out .
-CMD ASPNETCORE_URLS=http://*:$PORT dotnet MQTT.Broker.dll
+CMD ASPNETCORE_URLS=http://*:1883 dotnet MQTT.Broker.dll
