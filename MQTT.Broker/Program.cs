@@ -18,7 +18,7 @@ public class Program
                     o =>
                     {
                         // This will allow MQTT connections based on TCP port 1883.
-                        o.ListenAnyIP(1883, l => l.UseMqtt());
+                        o.ListenAnyIP(Int16.Parse(Environment.GetEnvironmentVariable("PORT") ?? "1883"), l => l.UseMqtt());
                     });
                 webBuilder.UseStartup<Startup>();
             });
